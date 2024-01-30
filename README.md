@@ -1,4 +1,4 @@
-# Verxio Contracts Deployed on the Areon Network Testnet
+# Verxio Contracts Deployed on the Lightshot Testnet
 ---
 ### Verxio Task Submission Contract Address
 0xa2a3b38f6088d729a1454bcd2863ce87b9953079
