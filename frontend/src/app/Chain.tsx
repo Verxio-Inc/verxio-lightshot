@@ -1,21 +1,21 @@
 import { Chain } from 'wagmi'
 
-export const AreonTestnet = {
-    id: 462,
-    name: 'Areon Network Testnet',
-    network: 'Areon Network Testnet',
+export const PegasusTestnet = {
+    id: 1891,
+    name: 'Pegasus Testnet',
+    network: 'Pegasus Testnet',
     nativeCurrency: {
       decimals: 18,
-      name: 'TAREA',
-      symbol: 'TAREA',
+      name: 'ETH',
+      symbol: 'ETH',
     },
     rpcUrls: {
-      public: { http: ['https://testnet-rpc.areon.network/'] },
-      default: { http: ['https://testnet-rpc.areon.network/'] },
+      public: { http: ['https://replicator.pegasus.lightlink.io/rpc/v1/'] },
+      default: { http: ['https://replicator.pegasus.lightlink.io/rpc/v1/'] },
     },
     blockExplorers: {
-      etherscan: { name: 'TAREA', url: 'https://areonscan.com/' },
-      default: { name: 'TAREA', url: 'https://areonscan.com/' },
+      etherscan: { name: 'Pegasus', url: 'https://pegasus.lightlink.io/' },
+      default: { name: 'Pegasus', url: 'https://pegasus.lightlink.io' },
     },
   
   } as const satisfies Chain
