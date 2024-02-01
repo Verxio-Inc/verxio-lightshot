@@ -13,11 +13,11 @@ import {
   coinbaseWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 // import { polygonZkEvm, polygonZkEvmTestnet } from "wagmi/chains";
-import { AreonTestnet } from "../app/Chain";
+import { PegasusTestnet } from "../app/Chain";
 
 const projectId = "274de4271228fdd69013c56274f0e688";
 const { chains, publicClient } = configureChains(
-  [AreonTestnet],
+  [PegasusTestnet],
   [publicProvider()]
 );
 
