@@ -1,4 +1,4 @@
-# Verxio Contracts Deployed on the LightLink Testnet
+# Verxio Contracts Deployed & Verified with Blockscout
 ---
 ### Verxio Task Submission Contract Address
 0xA2A3b38f6088d729a1454BCD2863ce87B9953079
