@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { WagmiConfig, createConfig, configureChains } from "wagmi";
 import "@rainbow-me/rainbowkit/styles.css";
 import { RainbowKitProvider, lightTheme } from "@rainbow-me/rainbowkit";
@@ -13,11 +13,13 @@ import {
   coinbaseWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 // import { polygonZkEvm, polygonZkEvmTestnet } from "wagmi/chains";
-import { PegasusTestnet } from "../app/Chain";
+import { AreonTestnet } from "./Chain";
+// import { ThirdwebProvider } from '@thirdweb-dev/react';
 
 const projectId = "274de4271228fdd69013c56274f0e688";
+const clientId = "f5888353ab056968602a49dda7537ef3";
 const { chains, publicClient } = configureChains(
-  [PegasusTestnet],
+  [AreonTestnet],
   [publicProvider()]
 );
 
@@ -49,23 +51,27 @@ const wagmiConfig = createConfig({
   publicClient,
 });
 
-const WagmiProviders = ({children})=> {
-return (
-  <WagmiConfig config={wagmiConfig}>
-    <RainbowKitProvider
-      theme={lightTheme({
-        accentColor: "#1570ef",
-        accentColorForeground: "white",
-        borderRadius: "small",
-        fontStack: "system",
-        overlayBlur: "small",
-      })}
-      chains={chains}
-    >
+const WagmiProviders = ({ children }) => {
+  return (
+    <WagmiConfig config={wagmiConfig}>
+      {/* <ThirdwebProvider
+        activeChain={AreonTestnet}
+        clientId={clientId}> */}
+      <RainbowKitProvider
+        theme={lightTheme({
+          accentColor: "#1570ef",
+          accentColorForeground: "white",
+          borderRadius: "small",
+          fontStack: "system",
+          overlayBlur: "small",
+        })}
+        chains={chains}
+      >
         {children}
-    </RainbowKitProvider>
-  </WagmiConfig>
-);
-}
+      </RainbowKitProvider>
+      {/* </ThirdwebProvider> */}
+    </WagmiConfig>
+  );
+};
 
-export default WagmiProviders
+export default WagmiProviders;

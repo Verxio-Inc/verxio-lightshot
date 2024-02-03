@@ -1,11 +1,7 @@
-"use client";
 import { permanentRedirect } from "next/navigation";
-import { useNav } from "../context/nav_context";
 
+const page = () => {
+  permanentRedirect("/dashboard/earn");
+};
 
-export default function Profile() {
-  const { user } = useNav();
-
-      permanentRedirect("/dashboard/earn");
-
-}
+export default page;

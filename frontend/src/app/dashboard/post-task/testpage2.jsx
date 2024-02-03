@@ -2,7 +2,11 @@
 import { useEffect, useState } from "react";
 import Button from "../../../components/Button";
 import { nanoid } from "nanoid";
-import { useContractWrite } from "wagmi";
+import {
+  useContractWrite,
+  usePrepareContractWrite,
+  useContractRead,
+} from "wagmi";
 import { VerxioSubmitTaskABI } from "../../../components/abi/VerxioSubmitTask.json";
 
 const Page = () => {
@@ -18,40 +22,72 @@ const Page = () => {
   const [totalPeople, setTotalPeople] = useState();
   const [amount, setAmount] = useState();
   const [fileDoc, setFileDoc] = useState();
+
+
   const taskID = nanoid();
 
-  const {
-    data: submitTaskData,
-    isLoading: isSubmittingTask,
-    isSuccess: isTaskSubmitted,
-    write: submitTaskWrite,
-    isError: isSubmittingTaskError,
-  } = useContractWrite({
-    address: "0x596661d498cb0ec4fde296fe318123834fc0dbbf",
-    abi: VerxioSubmitTaskABI,
-    functionName: "submitTask",
-    args: [
-      taskID,
-      title,
-      description,
-      "fileDoc-url.com",
-      totalPeople,
-      amount,
-      jobType,
-      paymentMethod,
-      responsibilities,
-      requirements,
-    ],
-  });
+  // const { config } = usePrepareContractWrite({
+  //   address: "0xa2a3b38f6088d729a1454bcd2863ce87b9953079",
+  //   abi: VerxioSubmitTaskABI,
+  //   functionName: "submitTask",
+  //   args: [
+  //     taskID,
+  //     title,
+  //     description,
+  //     "fileDoc-url.com",
+  //     totalPeople,
+  //     amount,
+  //     jobType,
+  //     paymentMethod,
+  //     responsibilities,
+  //     requirements,
+  //   ],
+  // });
+
+
+  // const {
+  //   data: submitTaskData,
+  //   isLoading: isSubmittingTask,
+  //   isSuccess: isTaskSubmitted,
+  //   write: submitTaskWrite,
+  //   isError: isSubmittingTaskError,
+  // } = useContractWrite(config);
+
+  // // Get Task Integration
+
+  // const {
+  //   data: getTaskData,
+  //   isError: isGettingProfileError,
+  //   isLoading: isGettingTask,
+  // } = useContractRead({
+  //   address: "0xa2a3b38f6088d729a1454bcd2863ce87b9953079",
+  //   abi: VerxioSubmitTaskABI,
+  //   functionName: "getTask",
+  //   args: [taskID],
+  //   watch: true,
+
+  //   onSuccess(data) {
+  //     console.log("Success: TaskData", getTaskData);
+  //   },
+  //   onError(error) {
+  //     console.log("Error", error);
+  //     console.log("Getting Tasking Error", isGettingProfileError);
+  //   },
+  // });
 
   const handleSubmitTask = async (e) => {
     e.preventDefault();
+    {
+      let fileURL;
+      try {
+        const transaction = submitTaskWrite();
+        console.log("Transaction submitted:", transaction);
+        console.log("Task upload successful!...", submitTaskData);
 
-    try {
-      const transaction = submitTaskWrite();
-      // Now you can perform additional submit logic, e.g., send data to the server
-    } catch (error) {
-      console.error("File Error:", error);
+        // Now you can perform additional submit logic, e.g., send data to the server
+      } catch (error) {
+        console.error("File Error:", error);
+      }
     }
   };
 
@@ -87,7 +123,7 @@ const Page = () => {
             cols="30"
             rows="10"
             name="description"
-            className="border outline-none rounded-[4px] border-black p-2 max-h-[120px]"
+            className="border outline-none rounded-[4px] border-black p-2"
           ></textarea>
         </div>
 
@@ -101,7 +137,7 @@ const Page = () => {
             cols="30"
             rows="10"
             name="responsibilities"
-            className="border outline-none rounded-[4px] border-black p-2 max-h-[120px]"
+            className="border outline-none rounded-[4px] border-black p-2 max-h-[90px]"
           ></textarea>
         </div>
 
@@ -115,7 +151,7 @@ const Page = () => {
             cols="30"
             rows="10"
             name="requirements"
-            className="border outline-none rounded-[4px] border-black p-2 max-h-[120px]"
+            className="border outline-none rounded-[4px] border-black p-2 max-h-[90px]"
           ></textarea>
         </div>
 
@@ -151,8 +187,6 @@ const Page = () => {
             <option value="icp">ICP</option>
             <option value="etherum">Ethereum</option>
             <option value="solana">Solana</option>
-            <option value="USDT">USDT</option>
-            <option value="USDC">USDC</option>
           </select>
         </div>
 
@@ -205,7 +239,9 @@ const Page = () => {
 
           {isSubmittingTaskError && <p>There is an Error in Submitting Task</p>}
 
-          {isTaskSubmitted && <p>Task Submitted Successfully!</p>}
+          {isTaskSubmitted && isGettingTask && (
+            <p>Task Submitted: Getting Task Data</p>
+          )}
         </article>
       </form>
     </div>
@@ -213,3 +249,4 @@ const Page = () => {
 };
 
 export default Page;
+
