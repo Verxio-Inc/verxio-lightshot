@@ -80,10 +80,10 @@ const JobCard = ({ jobs }) => {
             <div className="flex flex-col gap-2">
               <div>
                 <p className="text-[#020202] text-[18px] font-semibold capitalize">
-                  {jobs.jobPosterFirstName} {jobs.jobPosterLastName}
+                {jobs.jobTitle} 
                 </p>
                 <p className="font-normal text-[14px] text-[#424242]">
-                  {jobs.jobPosterBio}
+                  {jobs.jobPosterFirstName} {jobs.jobPosterLastName}
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ const JobCard = ({ jobs }) => {
           </p>
         </div>
         <p className="text-[#484851] font-normal lg:truncate sm:max-w-[400px] mt-3 sm:ml-5 text-[14px]">
-          {jobs.jobTitle}
+          {jobs.jobDescription}
         </p>
       </div>
       <div className="flex justify-between mt-[22px] items-center">
@@ -118,7 +118,7 @@ const JobCard = ({ jobs }) => {
             <p className="text-[12px]">0</p>
           </div>
         </div>
-        <div className="flex gap-[24px] items-center">
+        <div className="flex gap-[25px] items-center">
           <div className="flex border rounded-lg px-4 py-2 border-[#B6B8EC] items-center gap-2">
             <p className="text-[15px] font-medium">{Number(jobs.amount)}</p>
             {/* <span className="text-[8px] mr-1">$300</span> */}
