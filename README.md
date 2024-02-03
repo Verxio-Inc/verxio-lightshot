@@ -58,7 +58,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 ### Demo Video: https://youtu.be/zjrQdH2444c?si=3K6LoPBfqxVfuH62
-### Demo URL: https://verxio-areon.vercel.app/
+### Demo URL: https://verxio-lightshot.vercel.app/
 ## Conclusion
 Join us on the journey as we continue building and iterating, with the sole purpose of making Verxio an invaluable asset for our users.
 
