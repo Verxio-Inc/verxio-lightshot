@@ -2,7 +2,7 @@
 
 ![Verxio Information Architecture](https://github.com/Verxio-Inc/verxio-areon/blob/main/frontend/src/assets/information%20Architecture.png)
 
-Verxio is a decentralized web3 ecosystem with fair monetization of talents for their creative work and contribution while offering DAOs access to a talent pool of creatives to execute their projects.
+Verxio is a do-to-earn web3 ecosystem with fair monetization of talents for their creative work and contribution while offering DAOs access to a talent pool of creatives to execute their projects.
 
 Verxio allows crypto founders and DAOs access to our global talent pool allowing them to post job openings, gigs, quests, and bounties on the platform while these top talents can apply for these opportunities to be paid without restriction.
 
