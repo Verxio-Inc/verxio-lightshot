@@ -31,20 +31,10 @@ const Page = () => {
 
   // Gets UserProfile
   const { data: userProfile } = useContractRead({
-    address: "0x4838854e5150e4345fb4ae837e9fcca40d51f3fe",
+    address: "0x4838854e5150E4345Fb4Ae837E9FcCa40D51F3Fe",
     abi: VerxioUserProfileABI,
     functionName: "getProfile",
     args: [userAddress],
-
-    
-    // watch: true,
-    // onSuccess(data) {
-    //   console.log("Success: UserProfile", data);
-
-    // },
-    // onError(error) {
-    //   console.log("Error", error);
-    // },
   });
 
   setUserProfileDetail(userProfile)
@@ -53,7 +43,7 @@ const Page = () => {
 
   // Updates UserProfile
   const { config } = usePrepareContractWrite({
-    address: "0x4838854e5150e4345fb4ae837e9fcca40d51f3fe",
+    address: "0x4838854e5150E4345Fb4Ae837E9FcCa40D51F3Fe",
     abi: VerxioUserProfileABI,
     functionName: "updateProfile",
     args: [

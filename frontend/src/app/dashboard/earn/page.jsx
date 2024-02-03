@@ -17,15 +17,13 @@ const Page = () => {
   }, []);
 
   const { data} = useContractRead({
-    address: "0x596661d498cb0ec4fde296fe318123834fc0dbbf",
+    address: "0x7a114662911183125B1b5ce893bcA1d59151b5D5",
     abi: VerxioSubmitTaskABI,
     functionName: "getAllTasks",
   });
 
-  // console.log("Showing job results: ", data);
-
   const { data: userProfile } = useContractRead({
-    address: "0x4838854e5150e4345fb4ae837e9fcca40d51f3fe",
+    address: "0x4838854e5150E4345Fb4Ae837E9FcCa40D51F3Fe",
     abi: VerxioUserProfileABI,
     functionName: "getProfile",
     args: [userAddress],

@@ -1,20 +1,20 @@
-const AreonTestnet = {
-  id: 462,
-  name: "Areon Network Testnet",
-  network: "Areon Network Testnet",
+const PegasusTestnet = {
+  id: 1891,
+  name: "Pegasus Testnet",
+  network: "Pegasus Testnet",
   nativeCurrency: {
     decimals: 18,
-    name: "TAREA",
-    symbol: "TAREA",
+    name: "ETH",
+    symbol: "ETH",
   },
   rpcUrls: {
-    public: { http: ["https://testnet-rpc.areon.network/"] },
-    default: { http: ["https://testnet-rpc.areon.network/"] },
+    public: { http: ["https://replicator.pegasus.lightlink.io/rpc/v1/"] },
+    default: { http: ["https://replicator.pegasus.lightlink.io/rpc/v1/"] },
   },
   blockExplorers: {
-    etherscan: { name: "TAREA", url: "https://areonscan.com/" },
-    default: { name: "TAREA", url: "https://areonscan.com/" },
+    etherscan: { name: "ETH", url: "https://pegasus.lightlink.io//" },
+    default: { name: "ETH", url: "https://pegasus.lightlink.io//" },
   },
 };
 
-export { AreonTestnet };
+export { PegasusTestnet };

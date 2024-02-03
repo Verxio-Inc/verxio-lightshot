@@ -44,7 +44,6 @@ const Sidebar = () => {
 
               <Connect/>
           </div>
-          {/* {user ? <LogoutButton /> : <LoginButton />} */}
 
           <button className=" flex items-center  mx-auto w-[80%] gap-3">
             <p className="text-white text-[12px]">Powered by</p>
