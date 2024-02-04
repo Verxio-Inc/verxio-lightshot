@@ -57,7 +57,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Blockscout Verified Contract URL: https://pegasus.lightlink.io/address/0xa2a3b38f6088d729a1454bcd2863ce87b9953079
 
 
-### Demo Video: https://youtu.be/zjrQdH2444c?si=3K6LoPBfqxVfuH62
+### Demo Video: https://youtu.be/4DIK-1A9sJ0?si=Xg5sBMVG4F0DW1AT
 ### Demo URL: https://verxio-lightshot.vercel.app/
 ## Conclusion
 Join us on the journey as we continue building and iterating, with the sole purpose of making Verxio an invaluable asset for our users.
