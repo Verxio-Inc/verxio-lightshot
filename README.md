@@ -38,6 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ---
 #### Verxio Task Submission Contract Address
 0x7a114662911183125B1b5ce893bcA1d59151b5D5
+- Enterprise Whitelist Txn: https://pegasus.lightlink.io/tx/0xe00c1da17a1412fbf9a24d0217f81473b1f436fb57403d7ecddad2142a1320da
 - Blockscout Verified Contract URL: https://pegasus.lightlink.io/address/0x404bf459100f97644d1fd1dc591ee4a8bc8b5f65
 
 #### Verxio Proposal Submission Contract Address
@@ -50,6 +51,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 #### Verxio User Profile Contract Address
 0x4838854e5150E4345Fb4Ae837E9FcCa40D51F3Fe
+- Enterprise Whitelist Txn: https://pegasus.lightlink.io/tx/0x5bf1e1b578c695552ca492ba1e7a516483316e69c888d8f9dffe3085b3cf35e4
 - Blockscout Verified Contract URL: https://pegasus.lightlink.io/address/0x4838854e5150e4345fb4ae837e9fcca40d51f3fe
 
 #### Verxio DAO Governance Contract Address
